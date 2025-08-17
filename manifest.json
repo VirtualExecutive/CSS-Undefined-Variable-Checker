@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "CSS Undefined Variable Checker Tool",
+  "version": "1.0.0",
+  "description": "Web sayfalarındaki tanımsız CSS değişkenlerini tespit eder",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "Pages/popup.html",
+    "default_title": "CSS Undefined Variable Checker Tool"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["Scripts/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "Assets/icon16.png",
+    "48": "Assets/icon48.png",
+    "128": "Assets/icon128.png"
+  }
+}
